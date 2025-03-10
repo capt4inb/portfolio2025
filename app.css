@@ -35,6 +35,22 @@ body {
   transform: translateY(0);
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.experience-card:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 20px;

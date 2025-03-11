@@ -67,6 +67,57 @@
         document.documentElement.classList.remove("dark");
       }
     </script>
+
+    <style>
+      .typewriter {
+        display: inline-block;
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 2px;
+        animation: blink 1s infinite;
+        color: currentColor;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .perspective {
+        perspective: 1000px;
+      }
+
+      .rotate-y-10 {
+        transform: rotateY(10deg);
+      }
+
+      .rotate-y-[-10deg] {
+        transform: rotateY(-10deg);
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body class="bg-white dark:bg-dark text-gray-800 dark:text-gray-200">
     <!-- Header/Navigation -->
@@ -74,7 +125,7 @@
       <nav
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <a href="#" class="text-2xl font-bold text-primary">Portfolio</a>
+        <a href="#home" class="text-2xl font-bold text-primary">Portfolio</a>
 
         <div class="flex items-center space-x-4">
           <button
@@ -223,7 +274,7 @@
               />
             </svg>
             <span
-              class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary"
+              class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary"
               >Skills</span
             >
           </a>
@@ -247,7 +298,7 @@
               />
             </svg>
             <span
-              class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary"
+              class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary"
               >Work Experience</span
             >
           </a>
@@ -271,7 +322,7 @@
               />
             </svg>
             <span
-              class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary"
+              class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary"
               >Contact</span
             >
           </a>
@@ -286,40 +337,52 @@
           class="flex flex-col md:flex-row gap-12 items-center justify-center"
         >
           <!-- Hero Content -->
-          <div class="md:w-1/2 text-center md:text-left">
+          <div class="md:w-2/5 text-center md:text-left px-4">
             <h1
               class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in"
             >
               Hi, I'm
               <span class="text-primary relative inline-block animate-float"
-                >Phu
-                <span
-                  class="absolute -bottom-2 left-0 w-full h-1 bg-primary transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-                ></span>
-              </span>
+                >Phu</span
+              >
             </h1>
             <h2
-              class="text-2xl md:text-3xl font-medium mb-6 text-gray-600 dark:text-gray-400 animate-slide-up"
+              class="text-2xl md:text-3xl font-medium mb-6 text-gray-600 dark:text-gray-400 typewriter"
             >
-              UX/UI & Graphic Designer
+              <span class="typewriter-text"></span>
+              <span class="cursor">|</span>
             </h2>
             <p
-              class="text-lg mb-8 max-w-lg mx-auto md:mx-0 animate-fade-in-delay relative"
+              class="text-lg mb-8 max-w-xl mx-auto md:mx-0 animate-fade-in-delay relative"
             >
-              <span class="md:block">
-                Creative and detail-oriented UX/UI designer with 1 year of
-                experience in designing user-centered digital experiences.
+              <span
+                class="md:block typewriter-text"
+                data-text="Creative UX/UI designer with 2 years of experience in user centered design."
+              >
+                Creative UX/UI designer with
+                <span class="text-primary">2 years</span> of experience in
+                <span class="text-secondary">user centered design</span>.
               </span>
-              <span class="hidden md:block">
-                Proficient in conducting user research, creating wireframes,
-                prototypes, and high-fidelity mockups. Passionate about solving
-                complex problems and enhancing user satisfaction through
+              <span
+                class="hidden md:block typewriter-text-delay"
+                data-text="Skilled in user research, wireframes, prototypes and mockups. Passionate about solving complex problems and improving user satisfaction through innovative design solutions."
+              >
+                Skilled in <span class="text-primary">user research</span>,
+                <span class="text-secondary">wireframes</span>,
+                <span class="text-primary">prototypes</span> and
+                <span class="text-secondary">mockups</span>. Passionate about
+                solving complex problems and improving user satisfaction through
                 innovative design solutions.
               </span>
-              <span class="collapse-content hidden">
-                Proficient in conducting user research, creating wireframes,
-                prototypes, and high-fidelity mockups. Passionate about solving
-                complex problems and enhancing user satisfaction through
+              <span
+                class="collapse-content hidden typewriter-text-delay"
+                data-text="Skilled in user research, wireframes, prototypes and mockups. Passionate about solving complex problems and improving user satisfaction through innovative design solutions."
+              >
+                Skilled in <span class="text-primary">user research</span>,
+                <span class="text-secondary">wireframes</span>,
+                <span class="text-primary">prototypes</span> and
+                <span class="text-secondary">mockups</span>. Passionate about
+                solving complex problems and improving user satisfaction through
                 innovative design solutions.
               </span>
               <button
@@ -373,7 +436,7 @@
           </div>
 
           <!-- Chat Interface -->
-          <div class="md:w-1/2 relative">
+          <div class="md:w-3/5 relative">
             <!-- Added pulsing highlight effect -->
             <div
               class="absolute -inset-4 bg-primary/5 rounded-2xl blur-lg animate-pulse-slow"
@@ -387,8 +450,8 @@
               >
                 <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
                 <span class="text-sm text-gray-600 dark:text-gray-400"
-                  >Online - Usually responds in 24 hours</span
-                >
+                  >Online - Message to collaborate
+                </span>
               </div>
 
               <!-- Chat Messages Area -->
@@ -448,165 +511,239 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto">
-        <h2
-          class="text-3xl md:text-4xl font-bold mb-16 text-center animate-fade-in"
-        >
-          About Me
-        </h2>
+    <section
+      id="about"
+      class="py-32 px-6 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 relative overflow-hidden"
+    >
+      <!-- Background decoration -->
+      <div class="absolute inset-0 opacity-30 dark:opacity-20">
+        <div
+          class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-blue-100 dark:bg-blue-900 blur-3xl"
+        ></div>
+        <div
+          class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-purple-100 dark:bg-purple-900 blur-3xl"
+        ></div>
+      </div>
 
-        <!-- Education Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+      <div class="container mx-auto max-w-6xl relative">
+        <div class="text-center mb-20">
+          <span
+            class="inline-block py-1 px-3 rounded-full text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/50 font-semibold text-sm uppercase tracking-wider mb-4"
+            >About Me</span
           >
-            <h3 class="text-2xl font-bold mb-6 text-primary border-b pb-4">
-              Education
-            </h3>
-            <div class="space-y-8">
-              <div class="animate-slide-up">
-                <h4 class="font-semibold text-lg">
-                  Vinh Long University of Technology Education
-                </h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                  10/2019 – 09/2021
-                </p>
-                <ul
-                  class="list-disc ml-5 mt-3 text-gray-600 dark:text-gray-400"
-                >
-                  <li>Studying Graphic Design - Information Technology</li>
-                  <li>Degree grade: Very good – GPA of 3.47</li>
-                </ul>
-              </div>
-              <div class="animate-slide-up delay-100">
-                <h4 class="font-semibold text-lg">
-                  Nguyen Huu Canh Intermediate Professional School
-                </h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
-                  08/2015 – 09/2019
-                </p>
-                <ul
-                  class="list-disc ml-5 mt-3 text-gray-600 dark:text-gray-400"
-                >
-                  <li>Applied Informatics Technology</li>
-                  <li>Degree grade: Very good</li>
-                  <li>School Awards: 3rd Website design competition</li>
-                </ul>
-              </div>
+          <h2
+            class="text-5xl md:text-6xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 leading-tight"
+          >
+            Turning Ideas Into<br />Digital Experiences
+          </h2>
+          <p
+            class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          >
+            Creative and detail-oriented UX/UI designer with 2 years of
+            experience in designing user-centered digital experiences.
+            Proficient in conducting user research, creating wireframes,
+            prototypes, and high-fidelity mockups.
+          </p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div
+            class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-xl"
+          >
+            <div
+              class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"
+            >
+              2+
+            </div>
+            <div class="text-gray-600 dark:text-gray-400 mt-2 font-medium">
+              Years Experience
             </div>
           </div>
-
-          <!-- Pastime & Activities Section -->
           <div
-            class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-xl"
           >
-            <h3 class="text-2xl font-bold mb-6 text-primary border-b pb-4">
-              Pastime & Activities
-            </h3>
-            <ul
-              class="list-disc ml-5 space-y-3 text-gray-600 dark:text-gray-400"
+            <div
+              class="text-3xl font-bold text-purple-600 dark:text-purple-400"
             >
-              <li class="animate-fade-in delay-200">
-                Currently learning Korean at the Korean language center
-              </li>
-              <li class="animate-fade-in delay-300">
-                Passionate about learning new technologies, designs, colors,
-                especially AI and self-study coding
-              </li>
-              <li class="animate-fade-in delay-400">
-                Enjoys exercising at the gym and watching movies
-              </li>
-              <li class="animate-fade-in delay-500">
-                Regular reader of DailyDev, Dribble, Color Hunt, and other
-                tech/design resources
-              </li>
-            </ul>
+              50+
+            </div>
+            <div class="text-gray-600 dark:text-gray-400 text-sm">
+              Projects Completed
+            </div>
+          </div>
+          <div
+            class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-xl"
+          >
+            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">
+              3.47
+            </div>
+            <div class="text-gray-600 dark:text-gray-400 text-sm">
+              GPA Score
+            </div>
+          </div>
+          <div
+            class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-xl"
+          >
+            <div
+              class="text-3xl font-bold text-purple-600 dark:text-purple-400"
+            >
+              3rd
+            </div>
+            <div class="text-gray-600 dark:text-gray-400 text-sm">
+              Design Award
+            </div>
           </div>
         </div>
 
-        <!-- Achievement Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up delay-200"
-          >
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4"
-              >
+        <!-- Main Content -->
+        <div class="space-y-12">
+          <!-- Education & Activities Grid -->
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Education Section -->
+            <div
+              class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all"
+            >
+              <div class="flex items-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-primary"
+                  class="h-8 w-8 text-blue-500 mr-3"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                  />
                 </svg>
+                <h3 class="text-xl font-bold">Education Journey</h3>
               </div>
-              <div>
-                <h3 class="font-semibold text-lg">Education</h3>
-                <p class="text-gray-600 dark:text-gray-400">Very Good GPA</p>
+
+              <!-- Education Timeline -->
+              <div
+                class="space-y-6 pl-4 border-l-2 border-blue-200 dark:border-blue-700"
+              >
+                <div class="relative">
+                  <div
+                    class="absolute -left-6 w-4 h-4 rounded-full bg-blue-500"
+                  ></div>
+                  <h4 class="font-semibold">
+                    Vinh Long University of Technology Education
+                  </h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    10/2019 – 09/2021
+                  </p>
+                  <ul class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                    <li>• Studying Graphic Design - Information Technology</li>
+                    <li>• Degree grade: Very good – GPA of 3.47</li>
+                  </ul>
+                </div>
+
+                <div class="relative">
+                  <div
+                    class="absolute -left-6 w-4 h-4 rounded-full bg-blue-500"
+                  ></div>
+                  <h4 class="font-semibold">
+                    Nguyen Huu Canh Intermediate Professional School
+                  </h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    08/2015 – 09/2019
+                  </p>
+                  <ul class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                    <li>• Applied Informatics Technology</li>
+                    <li>• Degree grade: Very good</li>
+                    <li>• School Awards: 3rd Website design competition</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up delay-300"
-          >
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4"
-              >
+            <!-- Passions Section -->
+            <div
+              class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all"
+            >
+              <div class="flex items-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-primary"
+                  class="h-8 w-8 text-purple-500 mr-3"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
+                <h3 class="text-xl font-bold">Passions & Activities</h3>
               </div>
-              <div>
-                <h3 class="font-semibold text-lg">Languages</h3>
-                <p class="text-gray-600 dark:text-gray-400">
-                  Korean (Learning)
-                </p>
-              </div>
+
+              <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                  Currently learning Korean at the Korean language center
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                  Passionate about learning new technologies, designs, colors,
+                  especially AI and self-study coding
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                  Enjoys exercising at the gym and watching movies
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                  Regular reader of DailyDev, Dribble, Color Hunt, and other
+                  tech/design resources
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up delay-400"
-          >
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4"
+          <!-- Highlights -->
+          <div class="flex flex-wrap gap-6 justify-center">
+            <div
+              class="flex items-center bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-full py-3 px-6 shadow-lg hover:shadow-xl transition-all"
+            >
+              <svg
+                class="h-5 w-5 text-blue-500 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">Awards</h3>
-                <p class="text-gray-600 dark:text-gray-400">
-                  3rd Website Design
-                </p>
-              </div>
+                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+              </svg>
+              <span>Very Good GPA</span>
+            </div>
+
+            <div
+              class="flex items-center bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-full py-3 px-6 shadow-lg hover:shadow-xl transition-all"
+            >
+              <svg
+                class="h-5 w-5 text-purple-500 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+              <span>Korean (Learning)</span>
+            </div>
+
+            <div
+              class="flex items-center bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-full py-3 px-6 shadow-lg hover:shadow-xl transition-all"
+            >
+              <svg
+                class="h-5 w-5 text-yellow-500 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                />
+              </svg>
+              <span>3rd Website Design</span>
             </div>
           </div>
         </div>
@@ -654,16 +791,16 @@
                 <div class="space-y-3">
                   <div class="flex items-center justify-between text-sm">
                     <span class="text-gray-600 dark:text-gray-400"
-                      >Semantic Markup</span
+                      >Basic HTML Syntax and Structure</span
                     >
-                    <span class="text-orange-500 font-medium">95%</span>
+                    <span class="text-orange-500 font-medium">70%</span>
                   </div>
                   <div
                     class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
                   >
                     <div
                       class="bg-orange-500 h-full rounded-full"
-                      style="width: 95%"
+                      style="width: 70%"
                     ></div>
                   </div>
                 </div>
@@ -711,6 +848,16 @@
                       style="width: 90%"
                     ></div>
                   </div>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-blue-500/10 text-blue-500 rounded-full"
+                      >Tailwind CSS</span
+                    >
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-blue-500/10 text-blue-500 rounded-full"
+                      >SCSS</span
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -746,17 +893,27 @@
                 <div class="space-y-3">
                   <div class="flex items-center justify-between text-sm">
                     <span class="text-gray-600 dark:text-gray-400"
-                      >ES6+ & DOM</span
-                    >
-                    <span class="text-yellow-500 font-medium">85%</span>
+                      >Basic knowledge of Javascript
+                    </span>
+                    <span class="text-yellow-500 font-medium">45%</span>
                   </div>
                   <div
                     class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
                   >
                     <div
                       class="bg-yellow-500 h-full rounded-full"
-                      style="width: 85%"
+                      style="width: 45%"
                     ></div>
+                  </div>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-yellow-500/10 text-yellow-500 rounded-full"
+                      >Variables</span
+                    >
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-yellow-500/10 text-yellow-500 rounded-full"
+                      >Functions</span
+                    >
                   </div>
                 </div>
               </div>
@@ -791,7 +948,7 @@
                 <div class="space-y-3">
                   <div class="flex items-center justify-between text-sm">
                     <span class="text-gray-600 dark:text-gray-400"
-                      >User Experience</span
+                      >Develop wireframes, prototypes... with Figma</span
                     >
                     <span class="text-indigo-500 font-medium">88%</span>
                   </div>
@@ -802,6 +959,20 @@
                       class="bg-indigo-500 h-full rounded-full"
                       style="width: 88%"
                     ></div>
+                  </div>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-500 rounded-full"
+                      >Figma</span
+                    >
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-500 rounded-full"
+                      >Wireframes</span
+                    >
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-500 rounded-full"
+                      >Prototype</span
+                    >
                   </div>
                 </div>
               </div>
@@ -854,17 +1025,27 @@
                 <div class="space-y-3">
                   <div class="flex items-center justify-between text-sm">
                     <span class="text-gray-600 dark:text-gray-400"
-                      >Creative Suite</span
-                    >
-                    <span class="text-red-500 font-medium">82%</span>
+                      >Understanding of Adobe toolset
+                    </span>
+                    <span class="text-red-500 font-medium">72%</span>
                   </div>
                   <div
                     class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
                   >
                     <div
                       class="bg-red-500 h-full rounded-full"
-                      style="width: 82%"
+                      style="width: 72%"
                     ></div>
+                  </div>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-red-500/10 text-red-500 rounded-full"
+                      >Adobe Photoshop</span
+                    >
+                    <span
+                      class="px-2 py-1 text-xs font-medium bg-red-500/10 text-red-500 rounded-full"
+                      >Adobe Illustrator</span
+                    >
                   </div>
                 </div>
               </div>
@@ -901,16 +1082,16 @@
                 <div class="space-y-3">
                   <div class="flex items-center justify-between text-sm">
                     <span class="text-gray-600 dark:text-gray-400"
-                      >Version Control</span
+                      >Basic knowledge of Version Control</span
                     >
-                    <span class="text-[#F05033] font-medium">88%</span>
+                    <span class="text-[#F05033] font-medium">60%</span>
                   </div>
                   <div
                     class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
                   >
                     <div
                       class="bg-[#F05033] h-full rounded-full"
-                      style="width: 88%"
+                      style="width: 60%"
                     ></div>
                   </div>
                   <div class="flex flex-wrap gap-2 pt-2">
@@ -921,10 +1102,6 @@
                     <span
                       class="px-2 py-1 text-xs font-medium bg-[#F05033]/10 text-[#F05033] rounded-full"
                       >Merging</span
-                    >
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-[#F05033]/10 text-[#F05033] rounded-full"
-                      >CI/CD</span
                     >
                   </div>
                 </div>
@@ -985,22 +1162,124 @@
                     LINKTO Vietnam
                   </p>
                   <p class="text-gray-600 dark:text-gray-400 mt-4">
-                    Free commercial solution for influencers. Designed
-                    wireframes, prototypes, and web interfaces.
+                    A free commercial solution platform empowering influencers
+                    to expand their digital presence and monetize their content
+                    effectively.
                   </p>
-                  <div class="flex flex-wrap gap-2 mt-4">
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >Figma</span
+
+                  <!-- Technologies Section -->
+                  <div class="mt-6">
+                    <h4
+                      class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >Photoshop</span
+                      Technologies
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                      <div class="space-y-2">
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
+                            >UX/UI</span
+                          >
+                          <span
+                            class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full"
+                            >Figma</span
+                          >
+                          <span
+                            class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full"
+                            >Photoshop</span
+                          >
+                          <span
+                            class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full"
+                            >Illustrator</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Responsibilities Section -->
+                  <div class="mt-6">
+                    <h4
+                      class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
                     >
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >Illustrator</span
-                    >
+                      Key Responsibilities
+                    </h4>
+                    <ul class="space-y-3">
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Create wireframes, prototypes, and web interfaces per
+                          management requirements.
+                        </span>
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Contribute ideas and illustrate new features</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Make layout adjustments based on user feedback</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Create company's logo and brand identity system</span
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1026,23 +1305,112 @@
                     LIKELION Vietnam
                   </p>
                   <p class="text-gray-600 dark:text-gray-400 mt-4">
-                    Developed wireframes and interactive mockups. Collaborated
-                    with dev team to create functional interfaces. Made layout
-                    improvements based on user feedback.
+                    A programmer training unit with a parent company
+                    headquartered in Korea, focusing on developing skilled tech
+                    professionals.
                   </p>
-                  <div class="flex flex-wrap gap-2 mt-4">
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-secondary/10 to-primary/10 text-secondary rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >HTML</span
+
+                  <!-- Technologies Section -->
+                  <div class="mt-6">
+                    <h4
+                      class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-secondary/10 to-primary/10 text-secondary rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >TailwindCSS</span
+                      Technologies
+                    </h4>
+                    <div class="space-y-2">
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-secondary/10 text-secondary rounded-full"
+                          >UX/UI</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-secondary/10 to-primary/10 text-secondary rounded-full"
+                          >Figma</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-secondary/10 text-secondary rounded-full"
+                          >Front-end</span
+                        >
+                      </div>
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-secondary/10 to-primary/10 text-secondary rounded-full"
+                          >TailwindCSS</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-secondary/10 to-primary/10 text-secondary rounded-full"
+                          >JavaScript</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Responsibilities Section -->
+                  <div class="mt-6">
+                    <h4
+                      class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
                     >
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-secondary/10 to-primary/10 text-secondary rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >JavaScript</span
-                    >
+                      Key Responsibilities
+                    </h4>
+                    <ul class="space-y-3">
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Create wireframes, prototypes, and interactive
+                          mockups to showcase app functionality and design.
+                        </span>
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Work with the dev team to turn mockups into
+                          functional user interfaces.
+                        </span>
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Refine layouts based on user feedback while adhering
+                          to style guidelines.
+                        </span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1053,6 +1421,14 @@
               <div
                 class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-indigo-500/20 relative overflow-hidden transform group-hover:-translate-y-2"
               >
+                <!-- Decorative Background Elements -->
+                <div
+                  class="absolute top-0 right-0 w-24 h-24 bg-indigo-500/10 rounded-bl-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500/5 rounded-tr-full"
+                ></div>
+
                 <div class="relative z-10">
                   <span
                     class="text-indigo-500 font-semibold inline-block px-3 py-1 bg-indigo-500/10 rounded-full"
@@ -1060,17 +1436,79 @@
                     2022 - 01/2024
                   </span>
                   <h3
-                    class="text-xl font-bold mt-2 group-hover:text-indigo-500 transition-colors"
+                    class="text-xl font-bold mt-2 group-hover:text-indigo-500 transition-colors flex items-center gap-2"
                   >
                     Military Service
+                    <svg
+                      class="w-5 h-5 text-indigo-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+                      />
+                    </svg>
                   </h3>
                   <p class="text-gray-600 dark:text-gray-400 font-medium">
                     Vietnam People's Army
                   </p>
-                  <p class="text-gray-600 dark:text-gray-400 mt-4">
-                    Served in Division 5, Regiment 271. Completed military
-                    service and training programs.
-                  </p>
+
+                  <!-- Enhanced Description -->
+                  <div class="mt-4 space-y-4">
+                    <p class="text-gray-600 dark:text-gray-400">
+                      Served with honor in Division 5, Regiment 271,
+                      demonstrating leadership, discipline, and dedication to
+                      duty.
+                    </p>
+
+                    <!-- Key Achievements -->
+                    <div class="space-y-2">
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 bg-indigo-500 rounded-full"
+                        ></span>
+                        <span>Completed comprehensive military training</span>
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 bg-indigo-500 rounded-full"
+                        ></span>
+                        <span
+                          >Developed strong leadership and teamwork skills</span
+                        >
+                      </div>
+                      <div
+                        class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 bg-indigo-500 rounded-full"
+                        ></span>
+                        <span
+                          >Enhanced discipline and problem-solving
+                          abilities</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Transition Note -->
+                    <div
+                      class="mt-6 p-3 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg"
+                    >
+                      <p class="text-sm text-indigo-600 dark:text-indigo-400">
+                        After completing military service, transitioned back to
+                        civilian life with renewed focus and determination to
+                        pursue a career in design and technology.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1095,23 +1533,132 @@
                     25h Studio
                   </p>
                   <p class="text-gray-600 dark:text-gray-400 mt-4">
-                    Created brand identities, marketing materials, and
-                    e-commerce assets. Managed product designs and coordinated
-                    with design team.
+                    Work with stakeholders to shape brand vision, mission, and
+                    values through design and visual strategy.
                   </p>
-                  <div class="flex flex-wrap gap-2 mt-4">
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-500 rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >Canva</span
+
+                  <!-- Technologies Section -->
+                  <div class="mt-6">
+                    <h4
+                      class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-500 rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >Photoshop</span
+                      Technologies
+                    </h4>
+                    <div class="space-y-2">
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-purple-500/10 text-purple-500 rounded-full"
+                          >Graphic Design</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-500 rounded-full"
+                          >Canva</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-500 rounded-full"
+                          >Photoshop</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-500 rounded-full"
+                          >Illustrator</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-purple-500/10 text-purple-500 rounded-full"
+                          >Video</span
+                        >
+                        <span
+                          class="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-500 rounded-full"
+                          >Adobe Premiere</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Responsibilities Section -->
+                  <div class="mt-6">
+                    <h4
+                      class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
                     >
-                    <span
-                      class="px-3 py-1 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-500 rounded-full text-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md"
-                      >Premiere</span
-                    >
+                      Key Responsibilities
+                    </h4>
+                    <ul class="space-y-3">
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Design logos and brand identity systems for companies
+                          and new product brands</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Create marketing materials including brochures,
+                          catalogs, profiles, and packaging</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Collaborate with design team on product samples and
+                          mockups for e-commerce platforms</span
+                        >
+                      </li>
+                      <li class="flex items-start space-x-3">
+                        <svg
+                          class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                          >Execute additional design tasks as assigned by
+                          management</span
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1174,9 +1721,9 @@
                 Location
               </h3>
               <p class="text-gray-600 dark:text-gray-400">
-                3375 Sun Valley Road
+                District 7, HCM City
               </p>
-              <p class="text-gray-600 dark:text-gray-400">Spokane, WA</p>
+              <p class="text-gray-600 dark:text-gray-400">Vietnam</p>
             </div>
           </div>
 
@@ -1208,10 +1755,10 @@
                 Email
               </h3>
               <a
-                href="mailto:support@rocketvisa.com"
+                href="mailto:trieuphuisme@gmail.com"
                 class="text-primary hover:text-secondary transition-colors"
               >
-                support@rocketvisa.com
+                trieuphuisme@gmail.com
               </a>
             </div>
           </div>
@@ -1244,10 +1791,10 @@
                 Phone
               </h3>
               <a
-                href="tel:1-123-123-1234"
+                href="tel:0365454067"
                 class="text-primary hover:text-secondary transition-colors"
               >
-                1 (123) 123 1234
+                036 5454 067
               </a>
             </div>
           </div>
@@ -1277,13 +1824,14 @@
               <h3
                 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white"
               >
-                Live Chat
+                Facebook
               </h3>
-              <button
+              <a
+                href="https://www.facebook.com/LTPGaming/"
                 class="text-primary hover:text-secondary transition-colors font-medium"
               >
-                Start Conversation
-              </button>
+                Phu Le
+              </a>
             </div>
           </div>
         </div>
@@ -1308,33 +1856,41 @@
               >
             </a>
             <p class="text-gray-400 leading-relaxed">
-              Crafting digital experiences that blend creativity with
-              functionality. Let's build something amazing together.
+              Creative UX/UI designer with 2 years of experience in user
+              centered design.
             </p>
             <!-- Social Links -->
             <div class="flex space-x-4">
               <a
-                href="#"
+                href="mailto:trieuphuisme@gmail.com"
                 class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary transition-colors flex items-center justify-center group"
               >
                 <i
-                  class="fab fa-twitter text-gray-400 group-hover:text-white"
+                  class="fas fa-envelope text-gray-400 group-hover:text-white"
                 ></i>
               </a>
               <a
-                href="#"
+                href="tel:0365454067"
                 class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary transition-colors flex items-center justify-center group"
               >
                 <i
-                  class="fab fa-linkedin-in text-gray-400 group-hover:text-white"
+                  class="fas fa-phone text-gray-400 group-hover:text-white"
                 ></i>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/LTPGaming/"
                 class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary transition-colors flex items-center justify-center group"
               >
                 <i
-                  class="fab fa-github text-gray-400 group-hover:text-white"
+                  class="fab fa-facebook-f text-gray-400 group-hover:text-white"
+                ></i>
+              </a>
+              <a
+                href="https://t.me/capt4inb"
+                class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary transition-colors flex items-center justify-center group"
+              >
+                <i
+                  class="fab fa-telegram-plane text-gray-400 group-hover:text-white"
                 ></i>
               </a>
             </div>
@@ -1448,25 +2004,8 @@
             class="flex flex-col md:flex-row justify-between items-center gap-4"
           >
             <p class="text-gray-400 text-sm">
-              © 2025 Portfolio. All rights reserved.
+              © 2025 Portfolio Design by Phu Le. All rights reserved.
             </p>
-            <div class="flex items-center gap-6">
-              <a
-                href="#"
-                class="text-gray-400 hover:text-primary transition-colors"
-                >Privacy Policy</a
-              >
-              <a
-                href="#"
-                class="text-gray-400 hover:text-primary transition-colors"
-                >Terms of Service</a
-              >
-              <a
-                href="#"
-                class="text-gray-400 hover:text-primary transition-colors"
-                >Cookie Policy</a
-              >
-            </div>
           </div>
         </div>
       </div>
@@ -1586,19 +2125,19 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    <a href="tel:+1234567890" class="text-primary hover:underline">+1 (234) 567-890</a>
+                    <a href="#" class="text-primary hover:underline">036 5454 067</a>
                   </div>
                   <div class="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:contact@example.com" class="text-primary hover:underline">contact@example.com</a>
+                    <a href="#" class="text-primary hover:underline">trieuphuisme@gmail.com</a>
                   </div>
                   <div class="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                     </svg>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-primary hover:underline">LinkedIn Profile</a>
+                    <a href="https://drive.google.com/file/d/1j4eDXZ2SUkHGO0woQ3Z2F9HV4yc7IH--/view?usp=sharing" target="_blank" class="text-primary hover:underline">My CV</a>
                   </div>
                 </div>
               </div>
@@ -1738,6 +2277,39 @@
           ? "Read More"
           : "Read Less";
       }
+
+      // Update the typeWriter function
+      function typeWriter() {
+        const text = "UX/UI and Graphic Designer";
+        const element = document.querySelector(".typewriter-text");
+        const typingSpeed = 100; // Speed for typing
+        const deletingSpeed = 50; // Speed for deleting
+        const pauseTime = 4000; // Wait 4 seconds before repeating
+
+        function type(index = 0) {
+          if (index < text.length) {
+            element.textContent += text.charAt(index);
+            setTimeout(() => type(index + 1), typingSpeed);
+          } else {
+            setTimeout(deleteText, pauseTime);
+          }
+        }
+
+        function deleteText() {
+          const currentText = element.textContent;
+          if (currentText.length > 0) {
+            element.textContent = currentText.slice(0, -1);
+            setTimeout(deleteText, deletingSpeed);
+          } else {
+            setTimeout(() => type(), 500); // Small pause before retyping
+          }
+        }
+
+        type(); // Start the animation
+      }
+
+      // Call typeWriter when the page loads
+      document.addEventListener("DOMContentLoaded", typeWriter);
     </script>
   </body>
 </html>

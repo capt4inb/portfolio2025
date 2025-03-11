@@ -52,23 +52,60 @@ body {
 }
 
 .scroll-to-top {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #333;
-  color: white;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  background-color: #3b82f6;
+  color: white;
   border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s;
 }
 
 .scroll-to-top:hover {
-  background-color: #555;
+  background-color: #1e40af;
+}
+
+.typewriter {
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  animation: blink 1s infinite;
+  color: currentColor;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.rotate-y-10 {
+  transform: rotateY(10deg);
+}
+
+.rotate-y-neg-10 {
+  transform: rotateY(-10deg);
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

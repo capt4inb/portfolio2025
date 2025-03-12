@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKTO Platform - Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              secondary: "#1e40af",
+              dark: "#0f172a",
+            },
+          },
+        },
+        darkMode: "class",
+      };
+
+      // Check for saved theme preference
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      // Dark mode toggle
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+        localStorage.theme = document.documentElement.classList.contains("dark")
+          ? "dark"
+          : "light";
+      }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white dark:bg-dark shadow-md z-50">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="../index.html" class="text-2xl font-bold text-primary">← Back to Portfolio</a>
+
+        <div class="flex items-center space-x-4">
+          <button
+            onclick="toggleDarkMode()"
+            class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 hidden dark:block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 block dark:hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
+
+          <div class="hidden md:flex space-x-8">
+            <a href="../index.html#home" class="hover:text-primary transition-colors">Home</a>
+            <a href="../index.html#about" class="hover:text-primary transition-colors">About</a>
+            <a href="../index.html#skills" class="hover:text-primary transition-colors">Skills</a>
+            <a href="../index.html#projects" class="hover:text-primary transition-colors">Projects</a>
+            <a href="../index.html#work-experience" class="hover:text-primary transition-colors">Work Experience</a>
+            <a href="../index.html#contact" class="hover:text-primary transition-colors">Contact</a>
+          </div>
+
+          <button class="md:hidden" id="menu-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white dark:bg-dark py-6 px-6 border-t border-gray-200 dark:border-gray-700"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col space-y-6">
+          <a
+            href="../index.html#home"
+            class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-500 group-hover:text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary">Home</span>
+          </a>
+
+          <a
+            href="../index.html#about"
+            class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-500 group-hover:text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+            <span class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary">About</span>
+          </a>
+
+          <a href="../index.html#skills" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            <span class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary">Skills</span>
+          </a>
+
+          <a href="../index.html#projects" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            <span class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary">Projects</span>
+          </a>
+
+          <a href="../index.html#work-experience" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-500 group-hover:text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            <span class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary">Work Experience</span>
+          </a>
+
+          <a
+            href="../index.html#contact"
+            class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-500 group-hover:text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            <span class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary">Contact</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Details -->
+    <div class="container mx-auto px-6 pt-32 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <!-- Project Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    LINKTO Platform
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400 text-lg">
+                    A Commercial Solution for Influencer Marketing
+                </p>
+            </div>
+
+            <!-- Project Image -->
+            <div class="mb-12 rounded-xl overflow-hidden shadow-2xl">
+                <img src="https://placehold.co/1200x600" alt="LINKTO Platform" class="w-full">
+            </div>
+
+            <!-- Project Info -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-lg mb-2">Timeline</h3>
+                    <p class="text-gray-600 dark:text-gray-400">11/2024 - 03/2025</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-lg mb-2">Role</h3>
+                    <p class="text-gray-600 dark:text-gray-400">UX/UI Designer</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-lg mb-2">Technologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Figma</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Adobe XD</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Prototyping</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Description -->
+            <div class="prose prose-lg max-w-none dark:prose-invert">
+                <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                <p class="mb-6">
+                    LINKTO is a revolutionary platform designed to empower influencers in monetizing their digital presence effectively. The platform serves as a bridge between content creators and their audience, providing tools for content management, analytics, and monetization.
+                </p>
+
+                <h2 class="text-2xl font-bold mb-4">Challenge</h2>
+                <p class="mb-6">
+                    The main challenge was to create an intuitive interface that could handle complex functionalities while remaining accessible to users with varying levels of technical expertise. We needed to balance feature-rich capabilities with user-friendly design.
+                </p>
+
+                <h2 class="text-2xl font-bold mb-4">Solution</h2>
+                <p class="mb-6">
+                    We implemented a clean, modern design with a focus on user experience. Key features include:
+                </p>
+                <ul class="list-disc pl-6 mb-6">
+                    <li>Intuitive dashboard for content management</li>
+                    <li>Real-time analytics and performance metrics</li>
+                    <li>Integrated monetization tools</li>
+                    <li>Customizable profile pages</li>
+                    <li>Mobile-responsive design</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold mb-4">Results</h2>
+                <p class="mb-6">
+                    The platform successfully launched with positive user feedback, particularly regarding its ease of use and comprehensive feature set. Initial user testing showed a 95% satisfaction rate among content creators.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Suggested Projects -->
+    <section class="py-12 px-6 bg-gray-50 dark:bg-gray-800/50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-2xl font-bold mb-8 text-center">Suggested Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- LIKELION Project -->
+                <a href="project2.html" class="group block bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://placehold.co/600x400" alt="LIKELION E-Learning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-primary transition-colors">LIKELION E-Learning</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Learning management system for programming education</p>
+                    </div>
+                </a>
+
+                <!-- 25h Studio Project -->
+                <a href="project3.html" class="group block bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://placehold.co/600x400" alt="25h Studio Identity" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-primary transition-colors">25h Studio Identity</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Brand identity system for a creative agency</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+      // Mobile menu toggle
+      document.getElementById("menu-toggle").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+      });
+    </script>
+</body>
+</html> 

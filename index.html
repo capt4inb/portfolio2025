@@ -123,8 +123,11 @@
               >Skills</a
             >
             <a
-              href="#work-experience"
+              href="#projects"
               class="hover:text-primary transition-colors"
+              >Projects</a
+            >
+            <a href="#work-experience" class="hover:text-primary transition-colors"
               >Work Experience</a
             >
             <a href="#contact" class="hover:text-primary transition-colors"
@@ -205,34 +208,21 @@
             >
           </a>
 
-          <a
-            href="#skills"
-            class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-500 group-hover:text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-              />
+          <a href="#skills" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
             </svg>
-            <span
-              class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary"
-              >Skills</span
-            >
+            <span class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary">Skills</span>
           </a>
 
-          <a
-            href="#work-experience"
-            class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group"
-          >
+          <a href="#projects" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            <span class="font-medium text-gray-800 dark:text-gray-400 group-hover:text-primary">Projects</span>
+          </a>
+
+          <a href="#work-experience" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary/10 transition-all group">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 text-gray-500 group-hover:text-primary"
@@ -282,7 +272,7 @@
 
     <!-- Hero Section with Chat -->
     <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-6">
-      <div class="container mx-auto">
+      <div class="container mx-auto max-w-[1500px]">
         <div
           class="flex flex-col md:flex-row gap-12 items-center justify-center"
         >
@@ -464,21 +454,18 @@
     </section>
 
     <!-- About Section -->
-    <section
-      id="about"
-      class="py-32 px-6 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 relative overflow-hidden"
-    >
-      <!-- Background decoration -->
-      <div class="absolute inset-0 opacity-30 dark:opacity-20">
-        <div
-          class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-blue-100 dark:bg-blue-900 blur-3xl"
-        ></div>
-        <div
-          class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-purple-100 dark:bg-purple-900 blur-3xl"
-        ></div>
-      </div>
+    <section id="about" class="py-20 px-6 relative">
+      <div class="container mx-auto max-w-[1500px]">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 opacity-30 dark:opacity-20">
+          <div
+            class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-blue-100 dark:bg-blue-900 blur-3xl"
+          ></div>
+          <div
+            class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-purple-100 dark:bg-purple-900 blur-3xl"
+          ></div>
+        </div>
 
-      <div class="container mx-auto max-w-6xl relative">
         <div class="text-center mb-20">
           <span
             class="inline-block py-1 px-3 rounded-full text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/50 font-semibold text-sm uppercase tracking-wider mb-4"
@@ -548,518 +535,429 @@
             </div>
           </div>
         </div>
-
-        <!-- Main Content -->
-        <div class="space-y-12">
-          <!-- Education & Activities Grid -->
-          <div class="grid md:grid-cols-2 gap-12">
-            <!-- Education Section -->
-            <div
-              class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all"
-            >
-              <div class="flex items-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8 text-blue-500 mr-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                </svg>
-                <h3 class="text-xl font-bold">Education Journey</h3>
-              </div>
-
-              <!-- Education Timeline -->
-              <div
-                class="space-y-6 pl-4 border-l-2 border-blue-200 dark:border-blue-700"
-              >
-                <div class="relative">
-                  <div
-                    class="absolute -left-6 w-4 h-4 rounded-full bg-blue-500"
-                  ></div>
-                  <h4 class="font-semibold">
-                    Vinh Long University of Technology Education
-                  </h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
-                    10/2019 – 09/2021
-                  </p>
-                  <ul class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                    <li>• Studying Graphic Design - Information Technology</li>
-                    <li>• Degree grade: Very good – GPA of 3.47</li>
-                  </ul>
-                </div>
-
-                <div class="relative">
-                  <div
-                    class="absolute -left-6 w-4 h-4 rounded-full bg-blue-500"
-                  ></div>
-                  <h4 class="font-semibold">
-                    Nguyen Huu Canh Intermediate Professional School
-                  </h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
-                    08/2015 – 09/2019
-                  </p>
-                  <ul class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                    <li>• Applied Informatics Technology</li>
-                    <li>• Degree grade: Very good</li>
-                    <li>• School Awards: 3rd Website design competition</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Passions Section -->
-            <div
-              class="bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all"
-            >
-              <div class="flex items-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8 text-purple-500 mr-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <h3 class="text-xl font-bold">Passions & Activities</h3>
-              </div>
-
-              <ul class="space-y-3 text-gray-600 dark:text-gray-400">
-                <li class="flex items-center">
-                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                  Currently learning Korean at the Korean language center
-                </li>
-                <li class="flex items-center">
-                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                  Passionate about learning new technologies, designs, colors,
-                  especially AI and self-study coding
-                </li>
-                <li class="flex items-center">
-                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                  Enjoys exercising at the gym and watching movies
-                </li>
-                <li class="flex items-center">
-                  <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                  Regular reader of DailyDev, Dribble, Color Hunt, and other
-                  tech/design resources
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Highlights -->
-          <div class="flex flex-wrap gap-6 justify-center">
-            <div
-              class="flex items-center bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-full py-3 px-6 shadow-lg hover:shadow-xl transition-all"
-            >
-              <svg
-                class="h-5 w-5 text-blue-500 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-              </svg>
-              <span>Very Good GPA</span>
-            </div>
-
-            <div
-              class="flex items-center bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-full py-3 px-6 shadow-lg hover:shadow-xl transition-all"
-            >
-              <svg
-                class="h-5 w-5 text-purple-500 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                />
-              </svg>
-              <span>Korean (Learning)</span>
-            </div>
-
-            <div
-              class="flex items-center bg-white/80 backdrop-blur-xl dark:bg-gray-800/80 rounded-full py-3 px-6 shadow-lg hover:shadow-xl transition-all"
-            >
-              <svg
-                class="h-5 w-5 text-yellow-500 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                />
-              </svg>
-              <span>3rd Website Design</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto">
-        <div class="max-w-2xl mx-auto mb-12 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Technical Expertise
-          </h2>
-          <p class="text-gray-600 dark:text-gray-400">
-            Proficiency in modern web technologies and design tools
+    <section id="skills" class="py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+      <div class="container mx-auto max-w-[1500px]">
+        <div class="text-center mb-16">
+          <span class="inline-block py-1 px-3 rounded-full text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/50 font-semibold text-sm uppercase tracking-wider mb-4">My Skills</span>
+          <h2 class="text-4xl md:text-5xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Technical Expertise</h2>
+          <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Combining creativity with technical proficiency to deliver exceptional digital experiences
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          <!-- HTML -->
-          <div
-            class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              class="absolute top-0 right-0 w-24 h-24 bg-orange-500/10 rounded-bl-full"
-            ></div>
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <svg
-                  class="w-12 h-12 text-orange-500"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
-                  />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Design Skills -->
+          <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl font-bold mb-2 text-gray-900 dark:text-white"
-                >
-                  HTML5
-                </h3>
-                <div class="space-y-3">
-                  <div class="flex items-center justify-between text-sm">
-                    <span class="text-gray-600 dark:text-gray-400"
-                      >Basic HTML Syntax and Structure</span
-                    >
-                    <span class="text-orange-500 font-medium">70%</span>
-                  </div>
-                  <div
-                    class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
-                  >
-                    <div
-                      class="bg-orange-500 h-full rounded-full"
-                      style="width: 70%"
-                    ></div>
-                  </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Design</h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">UI/UX Design</span>
+                  <span class="text-sm font-medium text-primary">95%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Figma</span>
+                  <span class="text-sm font-medium text-primary">90%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Adobe Creative Suite</span>
+                  <span class="text-sm font-medium text-primary">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- CSS -->
-          <div
-            class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              class="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-bl-full"
-            ></div>
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <svg
-                  class="w-12 h-12 text-blue-500"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"
-                  />
+          <!-- Development Skills -->
+          <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl font-bold mb-2 text-gray-900 dark:text-white"
-                >
-                  CSS3
-                </h3>
-                <div class="space-y-3">
-                  <div class="flex items-center justify-between text-sm">
-                    <span class="text-gray-600 dark:text-gray-400"
-                      >Modern Layouts</span
-                    >
-                    <span class="text-blue-500 font-medium">90%</span>
-                  </div>
-                  <div
-                    class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
-                  >
-                    <div
-                      class="bg-blue-500 h-full rounded-full"
-                      style="width: 90%"
-                    ></div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-blue-500/10 text-blue-500 rounded-full"
-                      >Tailwind CSS</span
-                    >
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-blue-500/10 text-blue-500 rounded-full"
-                      >SCSS</span
-                    >
-                  </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Development</h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HTML/CSS</span>
+                  <span class="text-sm font-medium text-secondary">90%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-secondary h-2 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript</span>
+                  <span class="text-sm font-medium text-secondary">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">TailwindCSS</span>
+                  <span class="text-sm font-medium text-secondary">95%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-secondary h-2 rounded-full" style="width: 95%"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- JavaScript -->
-          <div
-            class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              class="absolute top-0 right-0 w-24 h-24 bg-yellow-500/10 rounded-bl-full"
-            ></div>
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <svg
-                  class="w-12 h-12 text-yellow-500"
-                  viewBox="0 0 1052 1052"
-                  fill="currentColor"
-                >
-                  <path fill="#f0db4f" d="M0 0h1052v1052H0z" />
-                  <path
-                    d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z"
-                    fill="#323330"
-                  />
+          <!-- Other Skills -->
+          <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 group">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl font-bold mb-2 text-gray-900 dark:text-white"
-                >
-                  JavaScript
-                </h3>
-                <div class="space-y-3">
-                  <div class="flex items-center justify-between text-sm">
-                    <span class="text-gray-600 dark:text-gray-400"
-                      >Basic knowledge of Javascript
-                    </span>
-                    <span class="text-yellow-500 font-medium">45%</span>
-                  </div>
-                  <div
-                    class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
-                  >
-                    <div
-                      class="bg-yellow-500 h-full rounded-full"
-                      style="width: 45%"
-                    ></div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-yellow-500/10 text-yellow-500 rounded-full"
-                      >Variables</span
-                    >
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-yellow-500/10 text-yellow-500 rounded-full"
-                      >Functions</span
-                    >
-                  </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Other Skills</h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Brand Identity</span>
+                  <span class="text-sm font-medium text-purple-500">90%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Video Editing</span>
+                  <span class="text-sm font-medium text-purple-500">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Project Management</span>
+                  <span class="text-sm font-medium text-purple-500">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- UX/UI -->
-          <div
-            class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              class="absolute top-0 right-0 w-24 h-24 bg-indigo-500/10 rounded-bl-full"
-            ></div>
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <svg
-                  class="w-12 h-12 text-indigo-500"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 3c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm3 7c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"
-                  />
-                </svg>
+        <!-- Additional Skills Tags -->
+        <div class="mt-16">
+          <h3 class="text-xl font-bold text-center mb-8 text-gray-900 dark:text-white reveal-title">Additional Technologies & Tools</h3>
+          <div class="skill-tags-wrapper relative max-w-[1400px] mx-auto overflow-hidden">
+            <div class="skill-tags-container flex gap-6 whitespace-nowrap animate-scroll">
+              <!-- First set of tags -->
+              <div class="flex gap-6 animate-scroll">
+                <span class="skill-tag px-6 py-3 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Responsive Design</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-blue-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Adobe XD</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/20 to-purple-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Git</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/20 to-green-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Adobe Premiere</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Adobe Illustrator</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/20 to-red-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Prototyping</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-indigo-500/20 to-indigo-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-pink-100 dark:bg-pink-900/50 text-pink-600 dark:text-pink-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">User Research</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-pink-500/20 to-pink-500/0 shine-effect"></div>
+                </span>
               </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl font-bold mb-2 text-gray-900 dark:text-white"
-                >
-                  UX/UI Design
-                </h3>
-                <div class="space-y-3">
-                  <div class="flex items-center justify-between text-sm">
-                    <span class="text-gray-600 dark:text-gray-400"
-                      >Develop wireframes, prototypes... with Figma</span
-                    >
-                    <span class="text-indigo-500 font-medium">88%</span>
-                  </div>
-                  <div
-                    class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
-                  >
-                    <div
-                      class="bg-indigo-500 h-full rounded-full"
-                      style="width: 88%"
-                    ></div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-500 rounded-full"
-                      >Figma</span
-                    >
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-500 rounded-full"
-                      >Wireframes</span
-                    >
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-500 rounded-full"
-                      >Prototype</span
-                    >
-                  </div>
-                </div>
+              <!-- Duplicate set of tags -->
+              <div class="flex gap-6 animate-scroll">
+                <span class="skill-tag px-6 py-3 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Responsive Design</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-blue-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Adobe XD</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/20 to-purple-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Git</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/20 to-green-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Adobe Premiere</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Adobe Illustrator</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/20 to-red-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">Prototyping</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-indigo-500/20 to-indigo-500/0 shine-effect"></div>
+                </span>
+                <span class="skill-tag px-6 py-3 bg-pink-100 dark:bg-pink-900/50 text-pink-600 dark:text-pink-400 rounded-full text-base font-medium hover:scale-110 hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden group whitespace-nowrap">
+                  <span class="relative z-10">User Research</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-pink-500/20 to-pink-500/0 shine-effect"></div>
+                </span>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Adobe Tools -->
-          <div
-            class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              class="absolute top-0 right-0 w-24 h-24 bg-red-500/10 rounded-bl-full"
-            ></div>
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 83 80"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_906_1855)">
+        <style>
+          @keyframes shine {
+            from {
+              transform: translateX(-100%);
+            }
+            to {
+              transform: translateX(100%);
+            }
+          }
+
+          @keyframes scroll {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+
+          .skill-tags-wrapper {
+            position: relative;
+            padding: 1rem 0;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          }
+
+          .skill-tags-container {
+            display: flex;
+            animation: scroll 25s linear infinite;
+            width: fit-content;
+          }
+
+          .skill-tags-container:hover {
+            animation-play-state: paused;
+          }
+
+          .shine-effect {
+            animation: shine 2s infinite;
+            transition: opacity 0.3s;
+            opacity: 0;
+            width: 200%;
+          }
+
+          .skill-tag {
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.4s ease;
+            min-width: max-content;
+          }
+
+          .skill-tag:hover {
+            transform: perspective(1000px) rotateX(10deg) scale(1.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          .skill-tag:hover .shine-effect {
+            opacity: 1;
+          }
+
+          .reveal-tags {
+            perspective: 1000px;
+            min-height: 4rem;
+          }
+
+          .reveal-tags .skill-tag {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: revealTag 0.5s ease forwards;
+          }
+
+          @keyframes revealTag {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-white dark:bg-gray-800">
+      <div class="container mx-auto max-w-[1500px]">
+        <div class="text-center mb-16">
+          <h2 class="reveal-title text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Featured Projects
+          </h2>
+          <p class="reveal-description text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Explore some of my recent work and the impact it has made.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="reveal-card">
+            <a href="projects/project1.html" class="group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 block">
+              <div class="relative aspect-video overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400"
+                  alt="LINKTO Platform"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 class="text-xl font-bold text-white mb-2">LINKTO Platform</h3>
+                  <p class="text-gray-200 text-sm">Solution platform for influencer marketing</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm">UX/UI</span>
+                  <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-400 rounded-full text-sm">Front-end</span>
+                </div>
+                <div class="inline-flex items-center text-gray-800 dark:text-gray-200 group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">
+                  View Details
+                  <svg
+                    class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path
-                      d="M67.5214 0H14.5299C6.50526 0 0 6.50526 0 14.5299V65.4701C0 73.4947 6.50526 80 14.5299 80H67.5214C75.546 80 82.0513 73.4947 82.0513 65.4701V14.5299C82.0513 6.50526 75.546 0 67.5214 0Z"
-                      fill="#001E36"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
-                    <path
-                      d="M18.4758 56.1007V20.9284C18.4758 20.6721 18.5859 20.5431 18.8061 20.5431C19.3926 20.5431 19.928 20.5345 20.7357 20.5156C21.5425 20.4975 22.414 20.4792 23.3502 20.4606C24.286 20.4424 25.2768 20.4241 26.3226 20.4055C27.3683 20.3874 28.4049 20.3783 29.4324 20.3779C32.2207 20.3779 34.5692 20.7265 36.4778 21.4238C38.1996 22.0062 39.7697 22.9651 41.074 24.2309C42.1797 25.3281 43.0341 26.6521 43.5784 28.1115C44.0933 29.5318 44.3542 31.0316 44.3491 32.5424C44.3491 35.4786 43.6702 37.9005 42.3125 39.808C40.9458 41.7235 39.0247 43.1739 36.8082 43.9638C34.4964 44.8264 31.9274 45.1189 29.1022 45.1189C28.2946 45.1189 27.7258 45.1098 27.3958 45.0914C27.0656 45.0733 26.5703 45.0641 25.9098 45.0639V56.0457C25.9194 56.113 25.9132 56.1816 25.8917 56.2461C25.8702 56.3106 25.834 56.3692 25.7859 56.4172C25.7378 56.4653 25.6792 56.5015 25.6147 56.523C25.5502 56.5445 25.4816 56.5507 25.4143 56.5411H18.8611C18.604 56.5411 18.4758 56.3948 18.4758 56.1007ZM25.9098 27.1482V38.62C26.3862 38.657 26.8265 38.6753 27.2307 38.675H29.0471C30.3836 38.6706 31.7113 38.4586 32.9828 38.0467C34.0732 37.7228 35.0476 37.0923 35.7899 36.2303C36.5054 35.3866 36.8632 34.2124 36.8633 32.7076C36.8923 31.6428 36.6153 30.5921 36.065 29.6802C35.4866 28.7983 34.6506 28.1161 33.6707 27.7262C32.3913 27.2289 31.0246 26.9949 29.6526 27.0382C28.7718 27.0382 27.9921 27.0473 27.3134 27.0656C26.6339 27.0846 26.1661 27.1121 25.9098 27.1482Z"
-                      fill="#31A8FF"
-                    />
-                    <path
-                      d="M65.6311 36.534C64.5967 36.0025 63.495 35.6137 62.3561 35.3781C61.1011 35.0902 59.8181 34.9425 58.5306 34.9377C57.8342 34.9189 57.1387 35.0023 56.4665 35.1855C56.0386 35.2807 55.6583 35.5245 55.3931 35.8735C55.2137 36.1526 55.118 36.4774 55.118 36.8092C55.128 37.1311 55.2441 37.4407 55.4482 37.6899C55.7697 38.066 56.1626 38.3747 56.604 38.5981C57.3888 39.0207 58.1975 39.3975 59.0259 39.7265C60.8732 40.3449 62.6384 41.1858 64.2825 42.2309C65.4025 42.9378 66.3293 43.9119 66.9796 45.0656C67.5265 46.1581 67.8003 47.3669 67.7778 48.5884C67.8107 50.2013 67.3498 51.7858 66.4568 53.1294C65.5007 54.4933 64.1728 55.5537 62.6312 56.1842C60.961 56.9179 58.8969 57.2849 56.439 57.2851C54.8775 57.3009 53.3186 57.1533 51.7878 56.8448C50.5818 56.6236 49.4077 56.2539 48.2926 55.7439C48.1722 55.6818 48.0721 55.5867 48.0039 55.4697C47.9356 55.3527 47.9021 55.2187 47.9073 55.0834V49.1388C47.9007 49.0806 47.91 49.0217 47.9342 48.9683C47.9585 48.915 47.9968 48.8693 48.045 48.836C48.0923 48.8093 48.1466 48.7976 48.2006 48.8026C48.2547 48.8075 48.306 48.8288 48.3477 48.8636C49.6646 49.6401 51.0945 50.2065 52.5859 50.5424C53.9005 50.8719 55.2489 51.0473 56.604 51.0653C57.8881 51.0653 58.833 50.9001 59.4387 50.5699C59.7123 50.4447 59.9437 50.2429 60.1049 49.9889C60.2661 49.7349 60.3502 49.4396 60.347 49.1388C60.347 48.6623 60.0718 48.2037 59.5214 47.7627C58.971 47.3224 57.8518 46.7903 56.1637 46.1664C54.4354 45.5649 52.7967 44.7317 51.2924 43.6896C50.2165 42.9413 49.3305 41.9516 48.7054 40.7998C48.1641 39.7152 47.8904 38.5167 47.9073 37.3046C47.9042 35.8482 48.3043 34.4194 49.0632 33.1764C49.9284 31.8076 51.1709 30.718 52.641 30.039C54.2553 29.2322 56.2735 28.8286 58.6958 28.828C60.1143 28.8166 61.5315 28.9178 62.934 29.1307C63.9497 29.2596 64.9426 29.5281 65.8847 29.9289C65.9594 29.9503 66.0281 29.9888 66.0854 30.0413C66.1427 30.0939 66.1871 30.159 66.2149 30.2316C66.2521 30.366 66.2706 30.5049 66.27 30.6444V36.2037C66.2738 36.2684 66.2605 36.333 66.2316 36.3909C66.2026 36.4489 66.1589 36.4982 66.1049 36.534C66.0313 36.5706 65.9502 36.5897 65.868 36.5897C65.7858 36.5897 65.7047 36.5706 65.6311 36.534Z"
-                      fill="#31A8FF"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_906_1855">
-                      <rect width="82.0513" height="80" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl font-bold mb-2 text-gray-900 dark:text-white"
-                >
-                  Adobe Tools
-                </h3>
-                <div class="space-y-3">
-                  <div class="flex items-center justify-between text-sm">
-                    <span class="text-gray-600 dark:text-gray-400"
-                      >Understanding of Adobe toolset
-                    </span>
-                    <span class="text-red-500 font-medium">72%</span>
-                  </div>
-                  <div
-                    class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
-                  >
-                    <div
-                      class="bg-red-500 h-full rounded-full"
-                      style="width: 72%"
-                    ></div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-red-500/10 text-red-500 rounded-full"
-                      >Adobe Photoshop</span
-                    >
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-red-500/10 text-red-500 rounded-full"
-                      >Adobe Illustrator</span
-                    >
-                  </div>
+                  </svg>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
-          <!-- Git -->
-          <div
-            class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              class="absolute top-0 right-0 w-24 h-24 bg-[#F05033]/10 rounded-bl-full"
-            ></div>
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <svg
-                  class="w-12 h-12 text-[#F05033]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="M251.17 116.6 139.4 4.82a16.49 16.49 0 0 0-23.31 0l-23.21 23.2 29.44 29.45a19.57 19.57 0 0 1 24.8 24.96l28.37 28.38a19.61 19.61 0 1 1-11.75 11.06L137.28 95.4v69.64a19.62 19.62 0 1 1-16.13-.57V94.2a19.61 19.61 0 0 1-10.65-25.73L81.46 39.44 4.83 116.08a16.49 16.49 0 0 0 0 23.32L116.6 251.17a16.49 16.49 0 0 0 23.32 0l111.25-111.25a16.5 16.5 0 0 0 0-23.33"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3
-                  class="text-xl font-bold mb-2 text-gray-900 dark:text-white"
-                >
-                  Git
-                </h3>
-                <div class="space-y-3">
-                  <div class="flex items-center justify-between text-sm">
-                    <span class="text-gray-600 dark:text-gray-400"
-                      >Basic knowledge of Version Control</span
-                    >
-                    <span class="text-[#F05033] font-medium">60%</span>
-                  </div>
-                  <div
-                    class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden"
-                  >
-                    <div
-                      class="bg-[#F05033] h-full rounded-full"
-                      style="width: 60%"
-                    ></div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-[#F05033]/10 text-[#F05033] rounded-full"
-                      >Branching</span
-                    >
-                    <span
-                      class="px-2 py-1 text-xs font-medium bg-[#F05033]/10 text-[#F05033] rounded-full"
-                      >Merging</span
-                    >
-                  </div>
+          <!-- Project 2 -->
+          <div class="reveal-card">
+            <a href="projects/project2.html" class="group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 block">
+              <div class="relative aspect-video overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400"
+                  alt="LIKELION E-Learning"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 class="text-xl font-bold text-white mb-2">LIKELION E-Learning</h3>
+                  <p class="text-gray-200 text-sm">Learning management system for programming education</p>
                 </div>
               </div>
-            </div>
+              <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-400 rounded-full text-sm">TailwindCSS</span>
+                  <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400 rounded-full text-sm">JavaScript</span>
+                </div>
+                <div class="inline-flex items-center text-gray-800 dark:text-gray-200 group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">
+                  View Details
+                  <svg
+                    class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="reveal-card">
+            <a href="projects/project3.html" class="group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 block">
+              <div class="relative aspect-video overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400"
+                  alt="25h Studio Brand Identity"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 class="text-xl font-bold text-white mb-2">25h Studio Identity</h3>
+                  <p class="text-gray-200 text-sm">Comprehensive brand identity system for a creative agency</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 rounded-full text-sm">Branding</span>
+                  <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 rounded-full text-sm">Adobe Suite</span>
+                </div>
+                <div class="inline-flex items-center text-gray-800 dark:text-gray-200 group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">
+                  View Details
+                  <svg
+                    class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -1070,7 +968,7 @@
       id="work-experience"
       class="py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 overflow-hidden"
     >
-      <div class="container mx-auto">
+      <div class="container mx-auto max-w-[1500px]">
         <h2
           class="text-3xl md:text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
         >
@@ -1626,7 +1524,7 @@
       id="contact"
       class="py-20 px-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800"
     >
-      <div class="container mx-auto max-w-5xl">
+      <div class="container mx-auto max-w-[1500px]">
         <div class="text-center mb-16">
           <h2
             class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
@@ -1795,7 +1693,7 @@
     <footer
       class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 px-6"
     >
-      <div class="container mx-auto">
+      <div class="container mx-auto max-w-[1500px]">
         <!-- Top Footer Section -->
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12"
@@ -1893,6 +1791,17 @@
               </li>
               <li>
                 <a
+                  href="#projects"
+                  class="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group"
+                >
+                  <span
+                    class="w-2 h-2 bg-primary rounded-full transform scale-0 group-hover:scale-100 transition-transform"
+                  ></span>
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
                   href="#work-experience"
                   class="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group"
                 >
@@ -1965,5 +1874,71 @@
     </footer>
 
     <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <script>
+      // Initialize ScrollReveal
+      window.addEventListener('DOMContentLoaded', (event) => {
+        ScrollReveal().reveal('.reveal-title', {
+          duration: 1000,
+          origin: 'top',
+          distance: '20px',
+          delay: 200,
+          easing: 'cubic-bezier(0.5, 0, 0, 1)',
+          reset: false
+        });
+
+        ScrollReveal().reveal('.reveal-description', {
+          duration: 1000,
+          origin: 'bottom',
+          distance: '20px',
+          delay: 400,
+          easing: 'cubic-bezier(0.5, 0, 0, 1)',
+          reset: false
+        });
+
+        // Reveal cards with stagger effect
+        ScrollReveal().reveal('.reveal-card', {
+          duration: 1000,
+          origin: 'bottom',
+          distance: '30px',
+          delay: 200,
+          interval: 200,
+          scale: 0.85,
+          easing: 'cubic-bezier(0.5, 0, 0, 1)',
+          cleanup: true
+        });
+      });
+
+      // Add styles for initial state and animations
+      const style = document.createElement('style');
+      style.textContent = `
+        .reveal-title,
+        .reveal-description,
+        .reveal-card {
+          visibility: hidden;
+        }
+
+        .reveal-card {
+          transform-origin: center bottom;
+        }
+
+        .reveal-card.is-visible {
+          visibility: visible;
+          animation: cardReveal 1s cubic-bezier(0.5, 0, 0, 1) forwards;
+        }
+
+        @keyframes cardReveal {
+          from {
+            opacity: 0;
+            transform: translateY(30px) scale(0.85);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
   </body>
 </html>
